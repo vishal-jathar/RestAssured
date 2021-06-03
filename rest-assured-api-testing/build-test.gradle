@@ -1,0 +1,103 @@
+apply plugin: 'java-library'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
+apply plugin: "io.qameta.allure"
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	testImplementation enforcedPlatform("org.junit:junit-bom:5.7.0")
+    testImplementation('org.junit.jupiter:junit-jupiter-api')
+    testImplementation('org.junit.jupiter:junit-jupiter-params')
+    
+    testImplementation('org.junit.platform:junit-platform-launcher:1.7.0')
+    
+    testImplementation('org.springframework.boot:spring-boot-starter-json:2.3.1.RELEASE')
+    
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    
+    testImplementation('com.aventstack:extentreports:5.0.5')
+    
+    testImplementation('io.rest-assured:rest-assured:4.3.2')
+    testImplementation('io.rest-assured:json-schema-validator:4.3.2')
+    
+    testImplementation('io.qameta.allure:allure-junit5:2.13.7')
+    testImplementation('io.qameta.allure:allure-rest-assured:2.13.7')
+    testImplementation('redis.clients:jedis')
+}
+
+// https://docs.gradle.org/current/dsl/org.gradle.api.tasks.SourceSet.html
+sourceSets {
+    test {
+        java {
+            srcDirs = ['src/test/api/java', 'src/test/unit/java']
+        }
+        resources {
+            srcDirs = ['src/test/api/resources', 'src/test/unit/resources']
+        }
+    }
+}
+
+def props = new Properties()
+
+// Possible values: MOCK, SCHEMA, Default: MOCK
+def storefrontTestMode = System.getProperty('test.storefront.mode') ?: "MOCK"
+props.setProperty('test.storefront.mode', storefrontTestMode)
+
+// Possible values: ALL, TAG, Default: ALL
+def storefrontTestApproach = System.getProperty('test.storefront.approach') ?: "ALL"
+
+def prop_file_name
+
+if(storefrontTestApproach.equals('TAG')) {
+	println "Using test_tag.properties..."
+	prop_file_name = 'test_tag.properties'
+	
+} else {
+	println "Using test.properties..."
+	prop_file_name = 'test.properties'
+}
+
+def prop_file_path = 'src/test/api/resources/' + prop_file_name
+file(prop_file_path).withInputStream { props.load(it) }
+
+// https://github.com/allure-framework/allure-gradle
+allure {
+    autoconfigure = false
+    version = '2.13.7'
+    useJUnit5 { version = '2.13.7' }
+}
+
+// https://docs.gradle.org/current/userguide/java_testing.html
+test {
+	useJUnitPlatform() {
+		includeTags props.getProperty("test.tags").split(",")
+	}
+	
+	// set system properties for the test JVM(s)
+	systemProperties(props)
+	
+  	testLogging {
+  		// Log any output that the tests write to stdout or stderr
+    	showStandardStreams = props.getProperty("test.showStandardStreams").toBoolean() 
+    	
+    	// Log the execution of each test and its result
+    	events "passed", "skipped", "failed" 
+    	
+    	exceptionFormat "full"
+  	}
+  	
+  	// set heap size for the test JVM(s)
+  	minHeapSize = "256m"
+ 	maxHeapSize = "1024m"
+ 	
+ 	// set JVM arguments for the test JVM(s)
+  	jvmArgs '-XX:MaxDirectMemorySize=1g'
+  	
+  	// Fail the 'test' task on the first test failure
+  	failFast = true
+}

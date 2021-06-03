@@ -1,0 +1,3 @@
+id, store_id, msisdn, http_status, code, sub_code
+
+"N1", "1681", "8990123456", "400", "authentication_error", "NA"

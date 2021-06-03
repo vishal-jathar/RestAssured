@@ -1,0 +1,15 @@
+buildscript {
+
+	repositories { jcenter() }
+
+	dependencies {
+    	classpath "io.qameta.allure:allure-gradle:2.8.1"
+  	}
+
+}
+
+apply from: "build-test.gradle"
+
+
+
+

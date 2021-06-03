@@ -1,0 +1,9 @@
+id, store_id, msisdn, http_status, request_payload_file_name, code, sub_code , description
+
+"N1", "370", null, "400", "req_payload2.json", "operator_not_supported", "NA", "User is not belong to the operator"
+
+"N2", "168", null, "400", "req_payload3.json", "invalid_parameter", "NA", "msisdn parameter cannot be resolved, msisdn length is not valid length:8"
+
+"N4", "1681", null, "400", "req_payload2.json", "invalid_parameter", "NA", "INVALID_PARAMETER"
+
+"N4", "168", 8990123456, "400", null, "general_error", "NA", "GENERAL_ERROR:null"

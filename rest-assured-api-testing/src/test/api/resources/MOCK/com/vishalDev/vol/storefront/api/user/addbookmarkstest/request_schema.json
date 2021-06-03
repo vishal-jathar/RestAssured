@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "subtype": {
+                    "type": "RINGBACK_NAMETUNE"
+                },
+                "type": "RBTPROFILETONE",
+                "id": 1404
+            },
+            {
+                "subtype": {
+                    "type": "RINGBACK_NAMETUNE"
+                },
+                "type": "RBTPROFILETONE",
+                "id": 1405
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "subtype": {
+                            "type": "RINGBACK_NAMETUNE"
+                        },
+                        "type": "RBTPROFILETONE",
+                        "id": 1404
+                    }
+                ],
+                "required": [
+                    "subtype",
+                    "type",
+                    "id"
+                ],
+                "properties": {
+                    "subtype": {
+                        "$id": "#/items/anyOf/0/properties/subtype",
+                        "type": "object",
+                        "title": "The subtype schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "type": "RINGBACK_NAMETUNE"
+                            }
+                        ],
+                        "required": [
+                            "type"
+                        ],
+                        "properties": {
+                            "type": {
+                                "$id": "#/items/anyOf/0/properties/subtype/properties/type",
+                                "type": "string",
+                                "title": "The type schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "RINGBACK_NAMETUNE"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    },
+                    "type": {
+                        "$id": "#/items/anyOf/0/properties/type",
+                        "type": "string",
+                        "title": "The type schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "RBTPROFILETONE"
+                        ]
+                    },
+                    "id": {
+                        "$id": "#/items/anyOf/0/properties/id",
+                        "type": "integer",
+                        "title": "The id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            1404
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}

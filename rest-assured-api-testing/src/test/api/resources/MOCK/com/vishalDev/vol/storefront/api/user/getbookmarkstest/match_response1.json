@@ -1,0 +1,43 @@
+{
+    "offset": 0,
+    "size": 3,
+    "total_items_count": 3,
+    "bookmarks": [
+        {
+            "user_id": 71009,
+            "bookmark_id": 2935,
+            "asset": {
+                "subtype": {
+                    "type": "ringback_musictune"
+                },
+                "type": "song",
+                "id": 1404
+            },
+            "bookmark_date": "2020-12-03 19:38:28 +0530"
+        },
+        {
+            "user_id": 71009,
+            "bookmark_id": 2933,
+            "asset": {
+                "subtype": {
+                    "type": "ringback_nametune"
+                },
+                "type": "rbtprofiletone",
+                "id": 1405
+            },
+            "bookmark_date": "2020-12-03 19:38:28 +0530"
+        },
+        {
+            "user_id": 71009,
+            "bookmark_id": 2934,
+            "asset": {
+                "subtype": {
+                    "type": "ringback_nametune"
+                },
+                "type": "rbtprofiletone",
+                "id": 1406
+            },
+            "bookmark_date": "2020-12-03 19:38:28 +0530"
+        }
+    ]
+}

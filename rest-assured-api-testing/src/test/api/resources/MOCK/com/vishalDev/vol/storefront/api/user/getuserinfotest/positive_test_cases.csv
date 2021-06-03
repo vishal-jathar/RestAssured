@@ -1,0 +1,6 @@
+id, store_id, msisdn, http_status, response_schema_file_name, response_exact_matcher_file_name
+
+# success cases
+"P1", "168", "8990123454", "200", "response_schema.json", null
+"P2", "168", "8990123455", "200", "response_schema.json", null
+"P3", "168", "8990123456", "200", "response_schema.json", null

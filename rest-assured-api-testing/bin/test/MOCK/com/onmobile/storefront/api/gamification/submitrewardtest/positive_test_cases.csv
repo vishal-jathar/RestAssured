@@ -1,0 +1,19 @@
+id, store_id, msisdn, http_status, gamification_client_id, request_payload_file_name,  response_schema_file_name, response_exact_matcher_file_name
+
+# success cases with passing msisdn and store_id in both query param and path param. and user_language is spannish
+"P1", "168", "8990123456" , "200", null, null,  null, null 
+
+# success cases with passing msisdn and user_language is en
+"P1", "168", "8990123456" , "200", null, "req_payload1.json",  null, null 
+
+
+# success cases for passig multiple user_language  
+#"P3", "354", "8990123456", "200", "req_payload2.json",  "response_schema.json", null 
+
+
+# success cases with passing cred.token and store_id in both query param and path param. and user_language is hindi
+#"P1", "168", "8990123456", "RBT" , "200", null, "request_schema.json", "response_schema.json", null 
+
+
+# success cases with passing token and user_language is arabic
+#"P1", "168", "8990123456", "RBT" , "200", null, "request_schema.json", "response_schema.json", null

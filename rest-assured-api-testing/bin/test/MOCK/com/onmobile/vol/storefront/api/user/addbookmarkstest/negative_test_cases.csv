@@ -1,0 +1,3 @@
+id, store_id, msisdn, http_status, request_payload_file_name, code, sub_code
+
+"N1", "168", "8990123456", "400", "req_payload3.json", "missing_parameter", "NA"
