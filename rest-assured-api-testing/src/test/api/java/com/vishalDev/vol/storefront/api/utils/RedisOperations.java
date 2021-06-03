@@ -1,4 +1,4 @@
-package com.onmobile.vol.storefront.api.utils;
+package com.vishaldev.vol.storefront.api.utils;
 
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties.Jedis;
 

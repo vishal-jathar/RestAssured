@@ -1,4 +1,4 @@
-package com.onmobile.vol.storefront.api.authentication;
+package com.vishaldev.vol.storefront.api.authentication;
 
 import com.onmobile.vol.storefront.common.api.ApiTestRequestBase;
 

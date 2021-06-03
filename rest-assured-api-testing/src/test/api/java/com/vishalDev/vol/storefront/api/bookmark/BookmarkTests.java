@@ -1,4 +1,4 @@
-package com.onmobile.vol.storefront.api.bookmark;
+package com.vishaldev.vol.storefront.api.bookmark;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 

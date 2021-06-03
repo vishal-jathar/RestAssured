@@ -1,4 +1,4 @@
-package com.onmobile.vol.storefront.api.authentication;
+package com.vishaldev.vol.storefront.api.authentication;
 
 import static org.hamcrest.Matchers.hasKey;
 

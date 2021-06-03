@@ -1,6 +1,6 @@
-package com.onmobile.vol.storefront.api.gamification;
+package com.vishaldev.vol.storefront.api.gamification;
 
-import com.onmobile.vol.storefront.common.api.ApiTestRequestBase;
+import com.vishaldev.vol.storefront.common.api.ApiTestRequestBase;
 
 class PositiveTestRequest extends ApiTestRequestBase {
 

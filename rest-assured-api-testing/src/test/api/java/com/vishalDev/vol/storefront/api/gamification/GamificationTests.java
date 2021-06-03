@@ -1,4 +1,4 @@
-package com.onmobile.vol.storefront.api.gamification;
+package com.vishaldev.vol.storefront.api.gamification;
 
 import static org.hamcrest.Matchers.hasKey;
 

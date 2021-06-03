@@ -1,4 +1,4 @@
-package com.onmobile.vol.storefront.api.bookmark;
+package com.vishaldev.vol.storefront.api.bookmark;
 
 import com.onmobile.vol.storefront.common.api.ApiTestRequestBase;
 

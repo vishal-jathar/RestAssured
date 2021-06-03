@@ -1,4 +1,4 @@
-package com.onmobile.vol.storefront.api.user;
+package com.vishaldev.vol.storefront.api.user;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 

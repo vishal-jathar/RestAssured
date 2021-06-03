@@ -1,4 +1,4 @@
-package com.onmobile.vol.storefront.api.user;
+package com.vishaldev.vol.storefront.api.user;
 
 import com.onmobile.vol.storefront.common.api.ApiTestRequestBase;
 
