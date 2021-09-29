@@ -1,8 +1,0 @@
-id, store_id, msisdn, http_status, request_payload_file_name, request_schema_file_name, response_schema_file_name, response_exact_matcher_file_name
-
-# success cases
-"P1", "168", "8990123456", "202", null, "request_schema.json", "response_schema.json", "match_response1.json"
-
-"P2", "168", "8990123456", "202", null, "request_schema.json", "response_schema.json", "match_response1.json"
-
-"P3", "168", "8990123456", "202", null, "request_schema.json", "response_schema.json", "match_response1.json"

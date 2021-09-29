@@ -1,7 +1,0 @@
-id, store_id, msisdn, http_status, request_payload_file_name, code, sub_code
-
-# failure cases
-"N1", null, "8990123456", "400", "req_payload2.json", "invalid_parameter", "NA"
-"N2", "168", null, "400", "req_payload2.json", "authentication_error", "NA"
-
-"N3", "168", "8990123456", "400", "req_payload3.json", "invalid_parameters", "NA"

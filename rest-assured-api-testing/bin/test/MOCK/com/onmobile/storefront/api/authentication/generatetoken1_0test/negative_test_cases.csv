@@ -1,9 +1,0 @@
-id, store_id, msisdn, http_status, request_payload_file_name, code, sub_code , description
-
-"N1", "370", null, "400", "req_payload3.json", "operator_not_supported", "NA", "User is not belong to the operator"
-
-"N2", "168", "89901234", "400", null, "invalid_parameter", "NA", "msisdn parameter cannot be resolved, msisdn length is not valid length:8"
-
-"N3", "225", "8990123456", "400", null, "authentication_error", "NA", "AUTHENTICATION_ERROR"
-
-"N4", "1681", null, "400", "req_payload3.json", "authentication_error", "NA", "Store 1681 is not supported"

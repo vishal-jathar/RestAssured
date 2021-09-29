@@ -1,4 +1,0 @@
-id, store_id, msisdn, http_status, gamification_client_id, request_payload_file_name, code, sub_code , description
-
-"N1", "370", "8990123456", "400", null, null, "authentication_error", "NA", "Cannot authorize user"
-
