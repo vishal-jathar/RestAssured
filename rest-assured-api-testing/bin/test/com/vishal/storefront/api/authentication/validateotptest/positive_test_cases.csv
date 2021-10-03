@@ -1,0 +1,14 @@
+id, store_id, msisdn, http_status, request_payload_file_name, request_schema_file_name, response_schema_file_name, response_exact_matcher_file_name
+
+# success cases with msisdn in query param
+"P1", "168", null, "200", "req_payload2.json", "request_schema.json", null, null
+
+# success cases with msisdn in query param with msisdn belong to different circle
+"P2", "168", "8990123456", "200","req_payload1.json", "request_schema.json", null, null
+
+# success cases with msisdn in query param with msisdn belong to different operator
+#"P2", "225", "9543123456", "200","req_payload2.json", "request_schema.json", "response_schema.json", null
+
+
+# success cases with msisdn in request body 
+"P3", "168", null, "200", "req_payload2.json", "request_schema.json", null, null

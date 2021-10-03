@@ -1,6 +1,6 @@
 package com.vishal.vol.storefront.api.user;
 
-import com.onmobile.vol.storefront.common.api.ApiTestRequestBase;
+import com.vishal.vol.storefront.common.api.ApiTestRequestBase;
 
 class NegativeTestRequest extends ApiTestRequestBase {
 
